@@ -10,10 +10,10 @@ pipeline {
         CONTAINER_NAME = "springboot-container" // 도커 컨테이너 이름
         JAR_FILE_NAME = "app.jar"   // 복사할 JAR 파일 이름
         PORT = "8081"   // 컨테이너와 연결할 포트
-        REMOTE_USER = "root"  // 원격(spring) 사용자
+        REMOTE_USER = "ec2-user"  // 원격(spring) 사용자
         REMOTE_HOST = "52.79.110.179"    // 원격(spring) 서버 서버 IP(Public IP)
         REMOTE_DIR = "/home/ec2-user/deploy"   // 원격서버에 파일 복사할 경로
-        SSH_CREDENTIALS_ID = "28fb9e07-da0c-48d7-b2f7-a67140bf444c" // Jenkins SSH 자격 증명 ID e365c3f6-3d96-4647-923c-a58e121b99f7
+        SSH_CREDENTIALS_ID = "28fb9e07-da0c-48d7-b2f7-a67140bf444c" // Jenkins SSH 자격 증명 ID
     }
 
     stages {
